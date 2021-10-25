@@ -87,7 +87,7 @@ namespace Figures
         }
         public override string ToString()
         {
-            return "Bishop";
+            return GetColor() + "Bishop" + GetId();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Figures
 {
-    class Pawn : IChessFigure
+    public class Pawn : IChessFigure
     {
         private string color;
         private int id;
@@ -70,8 +70,8 @@ namespace Figures
             throw new Exception("Pawn exception");
         }
         public override string ToString()
-        {
-            return "Pawn";
+        {   
+            return GetColor() + "Pawn"  + GetId();
         }
         public override bool Equals(object obj)
         {

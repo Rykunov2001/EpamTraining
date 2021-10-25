@@ -10,6 +10,8 @@ namespace Figures
         int GetId();
         List<int[]> PosibleMoves(int[] position, IChessFigure[,] board);
         string ToString();
+        bool Equals(object obj);
+        int GetHashCode();
 
     }
 }

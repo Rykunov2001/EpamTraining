@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Figures
 {
-    class Knight : IChessFigure
+    public class Knight : IChessFigure
     {
         private string color;
         private int id;
@@ -49,7 +49,7 @@ namespace Figures
         }
         public override string ToString()
         {
-            return "Knight";
+            return GetColor() + "Knight" + GetId();
         }
 
         public override bool Equals(object obj)
