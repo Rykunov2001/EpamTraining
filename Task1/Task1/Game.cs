@@ -20,7 +20,7 @@ namespace Task1
                                              { null,null,null,null,null,null,null,null },
                                              { new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26), new Pawn("Black", 26)},
                                              { new Rook("Black", 21), new Knight("Black", 22), new Bishop("Black", 23), new Queen("Black", 24), new King("Black", 25), new Bishop("Black", 23), new Knight("Black", 22), new Rook("Black", 21)}
-        };
+            };
         }
         
         private IChessFigure[,] MakeMove(IChessFigure[,] board, int[] move)

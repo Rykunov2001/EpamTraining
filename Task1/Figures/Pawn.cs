@@ -40,15 +40,30 @@ namespace Figures
             {
                 FigureAdder(board, position[0], j[1], ref posibleMoves);
             }
-            if (board[position[0] - 1, j[0]].GetColor() != this.GetColor())
+            try
             {
-                posibleMoves.Add(new int[3] { position[0] - 1, j[0], id });
+                if (board[position[0] - 1, j[0]].GetColor() is null )
+                {
+                   
+                }
+                else if(board[position[0] - 1, j[0]].GetColor() != this.GetColor())
+                {
+                    posibleMoves.Add(new int[3] { position[0] - 1, j[0], id });
+                }
+                if (board[position[0] + 1, j[0]].GetColor() is null )
+                {
+                    posibleMoves.Add(new int[3] { position[0] + 1, j[0], id });
+                }
+                else if (board[position[0] + 1, j[0]].GetColor() != this.GetColor())
+                {
+                    posibleMoves.Add(new int[3] { position[0] + 1, j[0], id });
+                }
             }
-            if (board[position[0] + 1, j[0]].GetColor() != this.GetColor())
-            {
-                posibleMoves.Add(new int[3] { position[0] + 1, j[0], id });
-            }
+            catch { }
             return posibleMoves;
+
+
+
         }
 
         private bool FigureAdder(IChessFigure[,] board, int x, int y, ref List<int[]> posibleMoves)

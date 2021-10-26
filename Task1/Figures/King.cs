@@ -18,17 +18,17 @@ namespace Figures
         {
             return id;
         }
-        public King(string color, int identifer)
+        public King(string color, int id)
         {
             this.color = color;
-            this.id = identifer;
+            this.id = id;
         }
         public List<int[]> PosibleMoves(int[] position, IChessFigure[,] board)
         {
             List<int[]> posibleMoves = new List<int[]>();
-            for (int i = position[0] - 1; i < position[1] + 1; i++)
+            for (int i = position[0] - 1 ; i <= position[0] + 1; i++)
             {
-                for (int j = position[1] - 1; j < position[1] + 1; j++)
+                for (int j = position[1] - 1 ; j <= position[1] + 1; j++)
                 {
                     if (board[i, j] == null)
                     {
