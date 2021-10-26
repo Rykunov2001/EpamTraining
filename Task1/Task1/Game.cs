@@ -10,6 +10,9 @@ namespace Task1
         private List<string> movesList;
         private IChessFigure[,] board;
         private bool whiteTurn;
+        /// <summary>
+        /// method puts chess figures on the board
+        /// </summary>
         public void InitialiseBoard()
         {
             board = new IChessFigure[8, 8] { { new Rook("White", 11), new Knight("White", 12), new Bishop("White", 13), new Queen("White", 14), new King("White", 15), new Bishop("White", 13), new Knight("White", 12), new Rook("White", 11)},
@@ -22,7 +25,13 @@ namespace Task1
                                              { new Rook("Black", 21), new Knight("Black", 22), new Bishop("Black", 23), new Queen("Black", 24), new King("Black", 25), new Bishop("Black", 23), new Knight("Black", 22), new Rook("Black", 21)}
             };
         }
-        
+        /// <summary>
+        /// method making the move of the selected figures 
+        /// Takes 2 parameters: checkerboard matrix and array of move's coordinates
+        /// </summary>
+        /// <param name="board"></param>
+        /// <param name="move"></param>
+        /// <returns></returns>
         private IChessFigure[,] MakeMove(IChessFigure[,] board, int[] move)
         {
             IChessFigure[,] boardAfterMove = board;

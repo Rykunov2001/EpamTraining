@@ -24,6 +24,13 @@ namespace Figures
         {
             return color;
         }
+        /// <summary>
+        /// method calculating the available moves for a figure
+        /// Takes 2 parameters: an array of figure coordinates and checkerboard matrix
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="board"></param>
+        /// <returns></returns>
         public List<int[]> PosibleMoves(int[] position, IChessFigure[,] board)
         {
             List<int[]> posibleMoves = new List<int[]>();
@@ -65,7 +72,15 @@ namespace Figures
 
 
         }
-
+        /// <summary>
+        ///  additional method calculating the available moves for a figure
+        /// Takes 4 parameters: checkerboard matrix, x,y - positions, list of posibleMoves
+        /// </summary>
+        /// <param name="board"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="posibleMoves"></param>
+        /// <returns></returns>
         private bool FigureAdder(IChessFigure[,] board, int x, int y, ref List<int[]> posibleMoves)
         {
             if (board[x, y] == null)
@@ -86,7 +101,7 @@ namespace Figures
         }
         public override string ToString()
         {   
-            return GetColor() + "Pawn"  + GetId();
+            return GetColor() + " Pawn "  + GetId();
         }
         public override bool Equals(object obj)
         {
