@@ -26,7 +26,14 @@ namespace Figures
             this.id = id;
             bishop = new Bishop(color, id);
             rook = new Rook(color, id);
-        }   
+        }
+        /// <summary>
+        /// method calculating the available moves for a figure
+        /// Takes 2 parameters: an array of figure coordinates and checkerboard matrix
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="board"></param>
+        /// <returns></returns>
         public List<int[]> PosibleMoves(int[] position, IChessFigure[,] board)
         {
             List<int[]> posibleMoves = new List<int[]>();
